@@ -6,19 +6,19 @@
         </div>
       <div class = " col-4 row">
         <HeaderLinkMain textValue = "Accueil"
-                        icon = "home.png"
+                        icon = "homeBlanc.png"
                         iconName = "home icon"
                         class = " test col-4">
 
        </HeaderLinkMain>
          <HeaderLinkMain textValue = "Marques"
-                         icon = "car.png"
+                         icon = "carBlanc.png"
                          iconName = "car icon"
                          class = "col-4">
 
          </HeaderLinkMain>
          <HeaderLinkMain textValue = "Contact"
-                         icon = "gps.png"
+                         icon = "gpsBlanc.png"
                          iconName = "gps icon"
                          class = "col-4">
 
