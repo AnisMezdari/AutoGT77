@@ -29,6 +29,15 @@
     /* border-bottom: 4px solid #000000; */
     margin-right : 30px;
   }
+
+  .logoHeader:hover  {
+    opacity: 0.5;
+  }
+
+  .logoSocialNetwork:hover {
+    opacity: 0.5;
+  }
+
   h3 {
     font-weight:  bold;
     font-size: 19px;

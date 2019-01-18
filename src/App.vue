@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss">
   @import "../node_modules/bootstrap/scss/bootstrap.scss";
+  @import "../node_modules/animate.css/animate.css";
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
