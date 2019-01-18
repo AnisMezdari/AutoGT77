@@ -2,20 +2,20 @@
   <div class = "containerFooter">
     <div class="sousContainer">
     </div>
-    <div class=" footerContainerText row">
-        <div class="col-8">
+    <div class=" footerContainerCopyrightText footerContainerText row">
+        <div class="col-10">
           © Copyright 2018 - AutoGT77 Vehicule sell - Website By HomerTimes (https://homertimes.fr)
         </div>
         <div class="">
-          <a href ="#"> Privacy Policy / Terms of Use </a>
+          <a   class = "col-8 linkFooter" href ="#"> Privacy Policy / Terms of Use </a>
         </div>
     </div>
 
     <div class=" footerContainerText row">
-      <a class = "col-8" href="#">Nous contacter</a>
+      <a class = "col-8 linkFooter" href="#">Nous contacter</a>
     </div>
     <div class=" footerContainerText row">
-      <a  class = "col-8" href="#">Contacter le développeur du site web</a>
+      <a  class = "col-8 linkFooter" href="#">Contacter le développeur du site web</a>
     </div>
   </div>
 </template>
@@ -45,13 +45,23 @@
 }
 
 .footerContainerText{
-  width : 100%;
+  width : 65%;
   color : white;
   font-family: Arial;
-  text-decoration: none;
+
   margin : auto;
-  width: 80%;
   font-size: 13px;
-  margin-top: 15px;
+}
+.linkFooter{
+    text-decoration: none;
+    color : white;
+    margin-top: 5px;
+}
+.linkFooter:hover{
+  color : #22313F;
+}
+.footerContainerCopyrightText{
+  margin-bottom : 15px;
+  margin-top : 10px;
 }
 </style>

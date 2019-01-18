@@ -45,11 +45,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .containerHeader {
-
     width : 65%;
     margin: auto;
   }
-
   .masterContainerHeader{
     background-color: #304357;
     border-bottom: 30px solid #22313F;
