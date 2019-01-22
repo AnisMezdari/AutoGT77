@@ -45,7 +45,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .containerHeader {
-    width : 65%;
+    width : 70%;
     margin: auto;
   }
   .masterContainerHeader{
