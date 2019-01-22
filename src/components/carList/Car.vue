@@ -32,12 +32,11 @@
 }
 
 .carText{
-
   color : #22313F;
   margin-top: 10px;
 }
 h2 {
-    font-family: Impact;
+  font-family: Impact;
   font-size: 20px;
 }
 
