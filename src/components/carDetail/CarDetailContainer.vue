@@ -1,13 +1,8 @@
 <template>
   <div class="containerCarDetail">
     <CarDetailCarrousel class ="contructorImg animated 1 bounceIn delay-0s"
-                        carImage = "audia3-1.jpg"
-                        carImageDeux = "audia3-2.jpg"
-                        carImageTrois= "audia3-3.jpg"
-                        carImageQuatre = "audia3-4.jpg"
-                        title = "Audi A3 Focus sportive"
-
-    > </CarDetailCarrousel>
+                        title = "Titre par défaut ">
+    </CarDetailCarrousel>
     <CarDetailDescription class ="contructorImg animated 1 bounceIn delay-0s"> </CarDetailDescription>
   </div>
 </template>
@@ -21,7 +16,7 @@ import CarDetailDescription from '@/components/carDetail/CarDetailDescription'
       components: {
         CarDetailCarrousel,
         CarDetailDescription
-     },
+      }
     }
 </script>
 

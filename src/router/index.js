@@ -20,7 +20,7 @@ export default new Router({
       component: IndexCars,
     },
     {
-      path: '/car',
+      path: '/car/:id',
       name: 'IndexCarDetail',
       component: IndexCarDetail,
     },

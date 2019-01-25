@@ -1,20 +1,23 @@
 <template>
-  <div class="containerCar">
-    <img  class ="contructorImg animated 1 bounceIn delay-0s"
-          :src="require(`./assets/${carImage}`)"
-          :alt = "carName"/>
+  <a :href="linkId">
+      <div class="containerCar">
+        <img  class ="contructorImg animated 1 bounceIn delay-0s"
+              :src="require(`./assets/${carImage}`)"
+              :alt = "carName"/>
 
-    <div class="carText">
-      <h2>{{carName}}</h2>
-      <h3>{{price}} / {{kilometer}} / {{years}} </h3>
-    </div>
-  </div>
+        <div class="carText">
+          <h2>{{carName}}</h2>
+          <h3>{{price}} / {{kilometer}} / {{years}} </h3>
+        </div>
+      </div>
+  </a>
+
 </template>
 
 <script>
     export default {
       name: 'Car',
-      props:["carImage","carName","price","kilometer","years"],
+      props:["carImage","carName","price","kilometer","years","linkId"],
       components: {
 
      },

@@ -14,32 +14,13 @@
 
 
        >
+         <b-carousel-slide v-for = "carImage in carImages"  :key="carImage.id">
+           <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
+              :src="require(`./assets/${carImage}`)" :alt = "title" />
+
+         </b-carousel-slide>
          <!-- Text slides with image -->
-         <b-carousel-slide>
-           <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-             :src="require(`./assets/${carImage}`)"
-             :alt = "title" />
-         </b-carousel-slide>
 
-         <!-- Slides with custom text -->
-         <b-carousel-slide>
-           <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-             :src="require(`./assets/${carImageDeux}`)"
-             :alt = "title" />
-         </b-carousel-slide>
-
-         <!-- Slides with image only -->
-         <b-carousel-slide>
-           <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-             :src="require(`./assets/${carImageTrois}`)"
-             :alt = "title" />
-         </b-carousel-slide>
-
-         <b-carousel-slide>
-           <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-             :src="require(`./assets/${carImageQuatre}`)"
-             :alt = "title" />
-         </b-carousel-slide>
        </b-carousel>
     </div>
 
@@ -50,9 +31,21 @@
 import { Carousel, Slide } from 'vue-carousel';
     export default {
       name: 'CarDetailCarrousel',
-      props:["title","carImage","carImageDeux","carImageTrois","carImageQuatre"],
+      props:["carImage","carImageDeux","carImageTrois","carImageQuatre"],
       components: {
      },
+     data() {
+       return {
+         carImages : '',
+         title : ''
+       }
+     },
+     created(){
+       this.$http.get("http://localhost:4000/cars/"+this.$route.params.id).then(function(data){
+        this.title = data.body.title;
+        this.carImages = data.body.images;
+       });
+     }
     }
 </script>
 

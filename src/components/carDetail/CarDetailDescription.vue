@@ -2,20 +2,18 @@
   <div class=" row CarDetailDescriptionContainer">
     <div class="col-3 globalDescription">
       <ul>
-        <li> <b>Price</b> : 4500€</li>
-        <li> <b> Kilometer</b> : 125 000km</li>
-        <li> <b>Years</b> : 2015</li>
+        <li> <b>Price</b> : {{car.price}}</li>
+        <li> <b> Kilometer</b> : {{car.kilometer}}</li>
+        <li> <b>Years</b> : {{car.year}}</li>
       </ul>
     </div>
     <p class ="col-7">
-      Verum ad istam omnem orationem brevis est defensio.
-      Nam quoad aetas M. Caeli dare potuit isti suspicioni locum,
-      fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita.
-      Qui ut huic virilem togam deditšnihil dicam hoc loco de me; tantum sit,
-      quantum vos existimatis; hoc dicam, hunc a patre continuo ad me esse deductum;
-      nemo hunc M. Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum
-      aut in M. Crassi castissima domo, cum artibus honestissimis erudiretur.
+        {{car.description}}
     </p>
+
+    <div class="test">
+    </div>
+
   </div>
 
 
@@ -26,7 +24,19 @@
       name: 'CarDetailDescription',
       props:[],
       components: {
-     },
+      },
+      methods: {
+      },
+      data() {
+        return {
+          car : ''
+        }
+      },
+      created(){
+        this.$http.get("http://localhost:4000/cars/"+this.$route.params.id).then(function(data){
+         this.car = data.body;
+        });
+      }
     }
 </script>
 

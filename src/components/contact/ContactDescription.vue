@@ -53,4 +53,7 @@ font-size: 15px;
   margin-bottom: 50px;
     font-family: Impact;
 }
+h3 {
+  color : #22313F
+}
 </style>
