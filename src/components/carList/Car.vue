@@ -32,6 +32,7 @@
 }
 .contructorImg{
   width : 100%;
+  height : 25vh;
 }
 
 .carText{
