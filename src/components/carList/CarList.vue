@@ -1,10 +1,10 @@
 <template>
   <div class="containerCarList">
     <div class="containerConstructorText row">
-      <h2> BMW </h2>
+      <h2> {{marqueTitle}} </h2>
     </div>
     <div  class="sousContainerCarList row">
-        <div  v-for="car in cars"  v-if="car.marque == 'Audi'" class="col-4">
+        <div  v-for="car in cars"  v-if = "marqueTitle == car.marque" class="col-4">
             <car :carImage = "car.images[0]"
                  :carName = "car.title"
                  :price = "car.price"
@@ -28,7 +28,10 @@ import car from '@/components/carList/Car'
      },
      data() {
        return {
-         cars : ''
+         cars : '',
+         marqueLink : '',
+         carToMarque : '',
+         marqueTitle : ''
        }
      },
      methods : {
@@ -37,9 +40,13 @@ import car from '@/components/carList/Car'
         },
       },
      created(){
+        console.log(this.$route.params.id)
+
        this.$http.get("http://localhost:4000/cars").then(function(data){
          this.cars = data.body;
-         console.log(this.cars)
+       });
+       this.$http.get("http://localhost:4000/marques/"+this.$route.params.marque).then(function(data){
+         this.marqueTitle = data.body.title;
        });
      }
    }

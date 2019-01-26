@@ -8,19 +8,22 @@
         <HeaderLinkMain textValue = "Accueil"
                         icon = "homeBlanc.png"
                         iconName = "home icon"
-                        class = " test col-4">
+                        class = " test col-4"
+                        linkValue = "/#/">
 
        </HeaderLinkMain>
          <HeaderLinkMain textValue = "Marques"
                          icon = "carBlanc.png"
                          iconName = "car icon"
-                         class = "col-4">
+                         class = "col-4"
+                         linkValue = "/#/">
 
          </HeaderLinkMain>
          <HeaderLinkMain textValue = "Contact"
                          icon = "gpsBlanc.png"
                          iconName = "gps icon"
-                         class = "col-4">
+                         class = "col-4"
+                         linkValue = "/#/contact">
 
          </HeaderLinkMain>
       </div>

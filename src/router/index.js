@@ -15,7 +15,7 @@ export default new Router({
       component: Index,
     },
     {
-      path: '/cars',
+      path: '/cars/:marque',
       name: 'IndexCars',
       component: IndexCars,
     },

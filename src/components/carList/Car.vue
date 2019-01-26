@@ -2,7 +2,7 @@
   <a :href="linkId">
       <div class="containerCar">
         <img  class ="contructorImg animated 1 bounceIn delay-0s"
-              :src="require(`./assets/${carImage}`)"
+              :src="carImage"
               :alt = "carName"/>
 
         <div class="carText">
@@ -31,7 +31,7 @@
   margin-bottom : 50px
 }
 .contructorImg{
-  width : 400px;
+  width : 100%;
 }
 
 .carText{

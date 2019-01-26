@@ -16,7 +16,7 @@
        >
          <b-carousel-slide v-for = "carImage in carImages"  :key="carImage.id">
            <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-              :src="require(`./assets/${carImage}`)" :alt = "title" />
+              :src="carImage" :alt = "title" />
 
          </b-carousel-slide>
          <!-- Text slides with image -->

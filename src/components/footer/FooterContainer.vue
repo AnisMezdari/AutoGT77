@@ -45,7 +45,7 @@
 }
 
 .footerContainerText{
-  width : 65%;
+  width : 70%;
   color : white;
   font-family: Arial;
 

@@ -1,9 +1,9 @@
 <template>
   <div class="containerCarDetail">
-    <CarDetailCarrousel class ="contructorImg animated 1 bounceIn delay-0s"
+    <CarDetailCarrousel class ="contructorImg animated 1 fadeInLeft delay-0s"
                         title = "Titre par défaut ">
     </CarDetailCarrousel>
-    <CarDetailDescription class ="contructorImg animated 1 bounceIn delay-0s"> </CarDetailDescription>
+    <CarDetailDescription class ="contructorImg animated 1 fadeInLeft delay-0s"> </CarDetailDescription>
   </div>
 </template>
 

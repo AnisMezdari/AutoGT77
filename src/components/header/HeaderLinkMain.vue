@@ -1,14 +1,14 @@
 <template>
   <div>
     <img   class = "icon" :src="require(`./assets/${icon}`)" :alt = "nameIcon"/>
-    <a href = "/test"> {{textValue}}</a>
+    <a :href = "linkValue"> {{textValue}}</a>
   </div>
 </template>
 
 <script>
   export default {
     name: 'HeaderLinkMain',
-    props:["icon","nameIcon","textValue"],
+    props:["icon","nameIcon","textValue","linkValue"],
   }
 </script>
 

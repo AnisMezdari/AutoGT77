@@ -1,37 +1,10 @@
 <template>
   <div class ="HomerContainer">
     <div class ="row">
-      <HomeImageConstructor class ="col-4"
-                            constructorImage = "bmw.png"
-                            constructorName = "Bmw" >
-      </HomeImageConstructor>
-      <HomeImageConstructor class ="col-4"
-                            constructorImage = "audi.png"
-                            constructorName = "Audi" >
-      </HomeImageConstructor>
-      <HomeImageConstructor class ="col-4"
-                            constructorImage = "mercedes.png"
-                            constructorName = "Mercedes-Benz" >
-      </HomeImageConstructor>
-    </div>
-    <div class ="row">
-      <HomeImageConstructor class ="col-4"
-                            constructorImage = "fiat.png"
-                            constructorName = "Fiat" >
-      </HomeImageConstructor>
-      <HomeImageConstructor class ="col-4"
-                            constructorImage = "renault.png"
-                            constructorName = "Renault" >
-      </HomeImageConstructor>
-      <HomeImageConstructor class ="col-4"
-                            constructorImage = "citroen.png"
-                            constructorName = "Citroën" >
-      </HomeImageConstructor>
-    </div>
-    <div class ="row">
-      <HomeImageConstructor class ="col-4"
-                            constructorImage = "peugeot.png"
-                            constructorName = "Peugeot" >
+      <HomeImageConstructor v-for = "marque in marques" :key = "marque.id" class ="col-4"
+                            :constructorImage = "marque.image"
+                            :constructorName = "marque.title"
+                            :linkMarque = "marque._id" >
       </HomeImageConstructor>
     </div>
   </div>
@@ -45,6 +18,18 @@
       components: {
        HomeImageConstructor,
      },
+     data() {
+       return {
+         marques : ''
+       }
+     },
+     created(){
+
+       this.$http.get("http://localhost:4000/marques").then(function(data){
+         this.marques = data.body
+         console.log(this.marques)
+       });
+     }
     }
 </script>
 
