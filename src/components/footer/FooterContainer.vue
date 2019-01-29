@@ -12,7 +12,7 @@
     </div>
 
     <div class=" footerContainerText row">
-      <a class = "col-8 linkFooter" href="#">Nous contacter</a>
+      <a class = "col-8 linkFooter" href="/#/contact">Nous contacter</a>
     </div>
     <div class=" footerContainerText row">
       <a  class = "col-8 linkFooter" href="#">Contacter le développeur du site web</a>

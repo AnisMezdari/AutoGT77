@@ -3,19 +3,15 @@
     <div class="row carDetailTitleCarrousel">
       <h4>{{title}}</h4>
     </div>
-    <div class="col-10 carrouselContainer">
+    <div class="row carrouselContainer">
       <b-carousel id="carousel1"
                    style="text-shadow: 1px 1px 2px #333;"
                    controls
                    indicators
                    :interval="5000"
-                   img-width="1024"
-                   img-height="480"
-
-
        >
          <b-carousel-slide v-for = "carImage in carImages"  :key="carImage.id">
-           <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
+           <img slot="img" class="d-block img-fluid w-100 imgCarrousel"
               :src="carImage" :alt = "title" />
 
          </b-carousel-slide>
@@ -56,8 +52,25 @@ import { Carousel, Slide } from 'vue-carousel';
     font-family: Impact;
     color : #22313F;
     margin-bottom:  15px;
+    padding-top:  20px;
   }
 
   .carrouselContainer{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width : 1100px ;
+    height : 550px;
+  }
+  .carousel-item{
+    width : 1100px !important;
+    height : 550px;
+  }
+  .imgCarrousel{
+    width : 100% ;
+    height : 100%;
+  }
+  #carousel1{
+    width : 100% ;
+    height : 100%;
   }
 </style>

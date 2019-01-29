@@ -7,7 +7,7 @@
         <li> <b>Years</b> : {{car.year}}</li>
       </ul>
     </div>
-    <p class ="col-7">
+    <p class ="col-7 descriptionCarDetail">
         {{car.description}}
     </p>
 
@@ -51,6 +51,10 @@
   }
   .globalDescription{
     margin-right: -50px;
+  }
+
+  .descriptionCarDetail{
+    font-style: italic;
   }
 
 </style>

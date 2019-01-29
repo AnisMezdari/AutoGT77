@@ -1,7 +1,7 @@
 <template>
   <a :href="linkId">
       <div class="containerCar">
-        <img  class ="contructorImg animated 1 bounceIn delay-0s"
+        <img  class ="contructorImg animated 1 fadeIn delay-0s"
               :src="carImage"
               :alt = "carName"/>
 
@@ -27,12 +27,12 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.containerCar{
-  margin-bottom : 50px
+.containerCar:hover{
+  opacity: 0.5;
 }
 .contructorImg{
-  width : 100%;
-  height : 25vh;
+  width : 400px;
+  height : 200px;
 }
 
 .carText{

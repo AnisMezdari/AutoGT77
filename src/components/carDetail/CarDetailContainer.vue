@@ -28,4 +28,5 @@ import CarDetailDescription from '@/components/carDetail/CarDetailDescription'
     width : 65%;
     margin-top: 15px;
   }
+
 </style>
