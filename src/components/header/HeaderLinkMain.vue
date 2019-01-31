@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class ="linkMain">
     <img   class = "icon" :src="require(`./assets/${icon}`)" :alt = "nameIcon"/>
     <a :href = "linkValue"> {{textValue}}</a>
   </div>
@@ -23,15 +23,17 @@
 
   }
   div {
-    text-align: center;
-    padding-top: 60px;
+
   }
   a:hover{
     color : #22313F;
   }
   .icon{
     width : 20px;
-    margin-top : -5px
+    margin-top: -5px;
+  }
+  .linkMain {
+    margin-right: 15px;
   }
 
 </style>

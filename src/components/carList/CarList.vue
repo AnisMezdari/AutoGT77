@@ -3,8 +3,23 @@
     <div class="containerConstructorText row">
       <h2> {{marqueTitle}} </h2>
     </div>
+    <div  id = "loadDiv" v-bind:style= "{display : computedDisplay}" class="col-xl-4 col-lg-6 ol-md-6 col-sm-12">
+      <div   class="sousContainerCarList row"  >
+        <div  v-for="initCar in initCars"  class="col-4">
+            <car :carImage = "require(`./assets/defautCar.png`)"
+                  carName = "Car title"
+                  price = "1€"
+                  kilometer = "1 Km"
+                  years  = "2000"
+              >
+            </car>
+        </div>
+    </div>
+    </div>
+
+
     <div  class="sousContainerCarList row">
-        <div  v-for="car in cars"  v-if = "marqueTitle == car.marque" class="col-4">
+        <div  v-for="car in cars"  v-if = "marqueTitle == car.marque" class="col-xl-4 col-lg-6 ol-md-6 col-sm-12">
             <car :carImage = "car.images[0]"
                  :carName = "car.title"
                  :price = "car.price"
@@ -29,9 +44,11 @@ import car from '@/components/carList/Car'
      data() {
        return {
          cars : '',
+         initCars : [],
          marqueLink : '',
          carToMarque : '',
-         marqueTitle : ''
+         marqueTitle : 'Title',
+         display : "initial"
        }
      },
      methods : {
@@ -39,13 +56,18 @@ import car from '@/components/carList/Car'
            index+1
         },
       },
+      computed: {
+        computedDisplay: function () {
+          return this.display;
+        }
+      },
      created(){
-        console.log(this.$route.params.id)
-
-       this.$http.get("http://localhost:4000/cars").then(function(data){
+       this.initCars.length = 10;
+       this.$http.get(process.env.API_LOCATION + "cars").then(function(data){
          this.cars = data.body;
+         this.display = "none";
        });
-       this.$http.get("http://localhost:4000/marques/"+this.$route.params.marque).then(function(data){
+       this.$http.get(process.env.API_LOCATION + "marques/"+this.$route.params.marque).then(function(data){
          this.marqueTitle = data.body.title;
        });
      }
@@ -58,6 +80,7 @@ import car from '@/components/carList/Car'
     width : 65%;
     margin : auto;
     margin-top: 30px;
+    min-height: 80vh;
   }
 
   .containerConstructorText{
@@ -67,4 +90,6 @@ import car from '@/components/carList/Car'
     margin-bottom: 30px;
     border-bottom: 3px solid #22313F;
   }
+
+
 </style>

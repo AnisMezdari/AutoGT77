@@ -21,6 +21,8 @@
       components: {
 
      },
+      created(){
+      }
     }
 </script>
 
@@ -31,8 +33,7 @@
   opacity: 0.5;
 }
 .contructorImg{
-  width : 400px;
-  height : 200px;
+  width : 100%;
 }
 
 .carText{

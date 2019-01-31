@@ -1,7 +1,7 @@
 <template>
   <div class ="HomerContainer">
     <div class ="row">
-      <HomeImageConstructor v-for = "marque in marques" :key = "marque.id" class ="col-4"
+      <HomeImageConstructor v-for = "marque in marques" :key = "marque.id" class ="col-xl-4 col-lg-6 col-md-6 col-sm-12"
                             :constructorImage = "marque.image"
                             :constructorName = "marque.title"
                             :linkMarque = "marque._id" >
@@ -25,7 +25,7 @@
      },
      created(){
 
-       this.$http.get("http://localhost:4000/marques").then(function(data){
+       this.$http.get(process.env.API_LOCATION + "marques").then(function(data){
          this.marques = data.body
          console.log(this.marques)
        });
@@ -39,7 +39,7 @@
 .HomerContainer{
   width : 60%;
   margin : auto;
-
+  min-height: 80vh;
   /* background-color: #FAFAFA; */
 }
 

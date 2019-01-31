@@ -1,35 +1,36 @@
 <template>
   <div  class="masterContainerHeader">
-    <div class="row containerHeader">
-      <HeaderLogo class = "col-6"> </HeaderLogo>
-        <div class = " col-2">
-        </div>
-      <div class = " col-4 row">
-        <HeaderLinkMain textValue = "Accueil"
-                        icon = "homeBlanc.png"
-                        iconName = "home icon"
-                        class = " test col-4"
-                        linkValue = "/#/">
+    <div class="containerHeader row">
+      <HeaderLogo class = " col-xl-8 col-lg-12  col-sm-12"> </HeaderLogo>
 
-       </HeaderLinkMain>
-         <HeaderLinkMain textValue = "Marques"
-                         icon = "carBlanc.png"
-                         iconName = "car icon"
-                         class = "col-4"
-                         linkValue = "/#/">
+      <div class = "containerLineLinkMain row ">
+          <HeaderLinkMain textValue = "Accueil"
+                          icon = "homeBlanc.png"
+                          iconName = "home icon"
+                          linkValue = "/#/"
+
+                          >
 
          </HeaderLinkMain>
-         <HeaderLinkMain textValue = "Contact"
-                         icon = "gpsBlanc.png"
-                         iconName = "gps icon"
-                         class = "col-4"
-                         linkValue = "/#/contact">
+           <HeaderLinkMain textValue = "Marques"
+                           icon = "carBlanc.png"
+                           iconName = "car icon"
+                           linkValue = "/#/"
+                           >
 
-         </HeaderLinkMain>
+           </HeaderLinkMain>
+           <HeaderLinkMain textValue = "Contact"
+                           icon = "gpsBlanc.png"
+                           iconName = "gps icon"
+                           linkValue = "/#/contact"
+                           >
+
+           </HeaderLinkMain>
       </div>
-
     </div>
+
 </div>
+
 </template>
 
 <script>
@@ -42,22 +43,47 @@
        HeaderLogo,
        HeaderLinkMain,
      },
+     data: {
+       window: {
+         width: 0,
+         height: 0
+       }
+     },
+     created() {
+       window.addEventListener('resize', this.handleResize)
+       this.handleResize();
+     },
+     destroyed() {
+       window.removeEventListener('resize', this.handleResize)
+     },
+     methods: {
+       handleResize() {
+         this.window.width = window.innerWidth;
+         this.window.height = window.innerHeight;
+       }
+     }
     }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .containerHeader {
-    width : 70%;
+    width : 80%;
     margin: auto;
   }
   .masterContainerHeader{
     background-color: #304357;
     border-bottom: 30px solid #22313F;
   }
-  .test {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+
+  .containerLineLinkMain{
+    text-align: center;
+  }
+  .linkMain{
+    /* margin-right: 20px; */
+  }
+  .containerLineLinkMain {
+    text-align: center;
+    margin: auto;
   }
 </style>

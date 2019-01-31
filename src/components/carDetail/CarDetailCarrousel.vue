@@ -37,7 +37,7 @@ import { Carousel, Slide } from 'vue-carousel';
        }
      },
      created(){
-       this.$http.get("http://localhost:4000/cars/"+this.$route.params.id).then(function(data){
+       this.$http.get(process.env.API_LOCATION + "cars/" + this.$route.params.id).then(function(data){
         this.title = data.body.title;
         this.carImages = data.body.images;
        });
