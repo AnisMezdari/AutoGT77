@@ -4,22 +4,24 @@
       <h3> Présentation </h3>
     </div>
     <div class = "row">
-      <div class="col-2">
+      <div class="col-xl-2 col-lg-6 ">
         <img  class ="contructorImg animated 1 bounceInLeft delay-0s"
               :src="require(`./assets/${logoEntreprise}`)"
               :alt = "logoDescription"/>
       </div>
 
-
-      <p class = "col-6 desciptionContact">
-        AutoGT 77 est une jeune entreprise de vente de véhicule créé fin 2018, nous vendons des véhicule de très bonne qualité,
-        avec le prix le plus bas possible.  Grâce à nos relations, nous avons accès a des offres très avantageuses pour vous,
-        nous choisissons seulement des voitures de qualité avec une durée de vie très hautes.
-        n'hésitez pas à nous contacter pour toutes informations complémentaire.
-      </p>
-      <div class="col-1">
+      <div class="col-xl-6 col-lg-6 col-12">
+        <p class = "desciptionContact">
+          AutoGT 77 est une jeune entreprise de vente de véhicule créé fin 2018, nous vendons des véhicule de très bonne qualité,
+          avec le prix le plus bas possible.  Grâce à nos relations, nous avons accès a des offres très avantageuses pour vous,
+          nous choisissons seulement des voitures de qualité avec une durée de vie très hautes.
+          n'hésitez pas à nous contacter pour toutes informations complémentaire.
+        </p>
       </div>
-      <div class="col-3 addressContact">
+
+      <div class="col-xl-1   col-lg-4">
+      </div>
+      <div class="col-xl-3 mt-12 col-lg-6 addressContact">
         <h5> <b> Adresse : </b> 9 rue de la tuilerie </h5>
         <h5> <b> Ville : </b> Coutevroult </h5>
         <h5> <b>Code postal  : </b> 77580 </h5>

@@ -1,15 +1,21 @@
 <template>
   <div class=" row CarDetailDescriptionContainer">
-    <div class="col-3 globalDescription">
-      <ul>
-        <li> <b>Price</b> : {{car.price}}</li>
-        <li> <b> Kilometer</b> : {{car.kilometer}}</li>
-        <li> <b>Years</b> : {{car.year}}</li>
-      </ul>
+    <div class="col-xl-3 col-lg-12  col-md-12 col-xs-12 globalDescription">
+      <div class="">
+        <ul>
+          <li> <b>Price</b> : {{car.price}}</li>
+          <li> <b> Kilometer</b> : {{car.kilometer}}</li>
+          <li> <b>Years</b> : {{car.year}}</li>
+        </ul>
+      </div>
+
     </div>
-    <p class ="col-7 descriptionCarDetail">
-        {{car.description}}
-    </p>
+    <div class="col-xl-7 col-lg-12  col-md-12 col-xs-12 ">
+      <p class =" descriptionCarDetail">
+          {{car.description}}
+      </p>
+    </div>
+
 
     <div class="test">
     </div>
@@ -50,7 +56,7 @@
     margin-top: 15px;
   }
   .globalDescription{
-    margin-right: -50px;
+
   }
 
   .descriptionCarDetail{

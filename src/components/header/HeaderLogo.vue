@@ -7,13 +7,13 @@
 
     <div class="col-xl-3  col-lg-12 col-sm-12  containerLogoSocialNetwork">
       <a href="#">
-        <img class = "logoSocialNetwork " src="./assets/facebook.svg" alt = "facebook icon">
+        <img class = "logoSocialNetwork " src="./assets/facebook.png" >
       </a>
       <a href="#">
-        <img class = "logoSocialNetwork" src="./assets/twitter.png" alt = "twitter icon">
+        <img class = "logoSocialNetwork" src="./assets/twitter.png" >
       </a>
       <a href="#">
-        <img class = "logoSocialNetwork" src="./assets/instagram.png" alt = "instagram icon">
+        <img class = "logoSocialNetwork" src="./assets/instagram.png" >
       </a>
     </div>
   </div>

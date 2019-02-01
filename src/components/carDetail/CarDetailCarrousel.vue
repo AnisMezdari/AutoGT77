@@ -3,7 +3,7 @@
     <div class="row carDetailTitleCarrousel">
       <h4>{{title}}</h4>
     </div>
-    <div class="row carrouselContainer">
+    <div class=" carrouselContainer">
       <b-carousel id="carousel1"
                    style="text-shadow: 1px 1px 2px #333;"
                    controls
@@ -58,19 +58,18 @@ import { Carousel, Slide } from 'vue-carousel';
   .carrouselContainer{
     margin-top: 60px;
     margin-bottom: 60px;
-    width : 1100px ;
-    height : 550px;
+    width : 83%;
   }
   .carousel-item{
-    width : 1100px !important;
-    height : 550px;
+    width : 100%;
+
   }
   .imgCarrousel{
     width : 100% ;
-    height : 100%;
+
   }
   #carousel1{
     width : 100% ;
-    height : 100%;
+
   }
 </style>

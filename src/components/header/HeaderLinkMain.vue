@@ -33,7 +33,7 @@
     margin-top: -5px;
   }
   .linkMain {
-    margin-right: 15px;
+    margin-right: 40px;
   }
 
 </style>
