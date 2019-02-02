@@ -3,8 +3,8 @@
     <div class="col-xl-3 col-lg-12  col-md-12 col-xs-12 globalDescription">
       <div class="">
         <ul>
-          <li> <b>Price</b> : {{car.price}}</li>
-          <li> <b> Kilometer</b> : {{car.kilometer}}</li>
+          <li> <b>Price</b> : {{addSpaceToLongNumber(car.price)}} €</li>
+          <li> <b> Kilometer</b> : {{addSpaceToLongNumber(car.kilometer)}} Km</li>
           <li> <b>Years</b> : {{car.year}}</li>
         </ul>
       </div>
@@ -36,6 +36,11 @@
       data() {
         return {
           car : ''
+        }
+      },
+      methods : {
+        addSpaceToLongNumber : function (price) {
+          return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         }
       },
       created(){

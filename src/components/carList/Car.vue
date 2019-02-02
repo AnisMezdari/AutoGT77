@@ -7,7 +7,7 @@
 
         <div class="carText">
           <h2>{{carName}}</h2>
-          <h3>{{price}} / {{kilometer}} / {{years}} </h3>
+          <h3>{{addSpaceToLongNumber(price)}} / {{addSpaceToLongNumber(kilometer)}} / {{years}} </h3>
         </div>
       </div>
   </a>
@@ -21,9 +21,12 @@
       components: {
 
      },
-      created(){
-      }
-    }
+     methods : {
+       addSpaceToLongNumber : function (price) {
+         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+       }
+     }
+   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
