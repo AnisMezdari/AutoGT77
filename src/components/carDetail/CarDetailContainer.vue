@@ -10,12 +10,13 @@
 <script>
 import CarDetailCarrousel from '@/components/carDetail/CarDetailCarrousel'
 import CarDetailDescription from '@/components/carDetail/CarDetailDescription'
+
     export default {
       name: 'CarDetailContainer',
       props:[],
       components: {
         CarDetailCarrousel,
-        CarDetailDescription
+        CarDetailDescription,
       }
     }
 </script>
@@ -25,7 +26,7 @@ import CarDetailDescription from '@/components/carDetail/CarDetailDescription'
 
   .containerCarDetail{
     margin : auto;
-    width : 65%;
+    width : 75%;
     margin-top: 15px;
   }
 

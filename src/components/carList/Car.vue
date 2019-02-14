@@ -7,7 +7,7 @@
 
         <div class="carText">
           <h2>{{carName}}</h2>
-          <h3>{{addSpaceToLongNumber(price)}} / {{addSpaceToLongNumber(kilometer)}} / {{years}} </h3>
+            <h3>{{addSpaceToLongNumber(price,"€")}}/ {{addSpaceToLongNumber(kilometer,"km")}} / {{years}} </h3>
         </div>
       </div>
   </a>
@@ -22,8 +22,11 @@
 
      },
      methods : {
-       addSpaceToLongNumber : function (price) {
-         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+       addSpaceToLongNumber : function (price, endString) {
+         if(price == null){
+           return ""
+         }
+         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " " + endString ;
        }
      }
    }

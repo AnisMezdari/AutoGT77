@@ -29,7 +29,6 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .logoHeader {
-    width: 100%;
     max-width: 200px;
     /* border-bottom: 4px solid #000000; */
 

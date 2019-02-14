@@ -22,11 +22,11 @@
       <div class="col-xl-1   col-lg-4">
       </div>
       <div class="col-xl-3 mt-12 col-lg-6 addressContact">
-        <h5> <b> Adresse : </b> 9 rue de la tuilerie </h5>
-        <h5> <b> Ville : </b> Coutevroult </h5>
-        <h5> <b>Code postal  : </b> 77580 </h5>
-        <h5> <b>Téléphone :  </b> 06 25 29 78 64</h5>
-        <h5> <b>Email : </b> mezdari.anis@gmail.com</h5>
+        <h5> <b> Adresse : </b> 20 rue Camille claudel  </h5>
+        <h5> <b> Ville : </b> Bussy-Saint-Georges </h5>
+        <h5> <b>Code postal  : </b> 77600 </h5>
+        <h5> <b>Téléphone :  </b> 07 81 31 11 28</h5>
+        <h5> <b>Email : </b> eric.lau12@yahoo.fr</h5>
       </div>
     </div>
   </div>

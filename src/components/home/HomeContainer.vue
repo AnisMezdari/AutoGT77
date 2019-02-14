@@ -39,7 +39,7 @@
 .HomerContainer{
   width : 60%;
   margin : auto;
-  min-height: 80vh;
+
   /* background-color: #FAFAFA; */
 }
 

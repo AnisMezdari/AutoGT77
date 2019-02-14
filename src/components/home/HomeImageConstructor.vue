@@ -23,7 +23,8 @@ require('vue2-animate/dist/vue2-animate.min.css')
 
 div {
   text-align: center;
-  padding-top: 40px;
+  padding-top: 50px;
+  padding-bottom : 30px;
 }
 div:hover{
   opacity: 0.5;

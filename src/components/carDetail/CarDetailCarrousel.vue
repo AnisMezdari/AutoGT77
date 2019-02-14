@@ -3,12 +3,13 @@
     <div class="row carDetailTitleCarrousel">
       <h4>{{title}}</h4>
     </div>
-    <div class=" carrouselContainer">
+    <div class="carrouselContainer row">
       <b-carousel id="carousel1"
                    style="text-shadow: 1px 1px 2px #333;"
                    controls
                    indicators
                    :interval="5000"
+                   class = "col-9"
        >
          <b-carousel-slide v-for = "carImage in carImages"  :key="carImage.id">
            <img slot="img" class="d-block img-fluid w-100 imgCarrousel"
@@ -18,6 +19,8 @@
          <!-- Text slides with image -->
 
        </b-carousel>
+        <CarDetailFormContact class = "col-3"> </CarDetailFormContact>
+
     </div>
 
   </div>
@@ -25,10 +28,12 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
+import CarDetailFormContact from '@/components/carDetail/CarDetailFormContact'
     export default {
       name: 'CarDetailCarrousel',
       props:["carImage","carImageDeux","carImageTrois","carImageQuatre"],
       components: {
+        CarDetailFormContact
      },
      data() {
        return {
@@ -58,7 +63,6 @@ import { Carousel, Slide } from 'vue-carousel';
   .carrouselContainer{
     margin-top: 60px;
     margin-bottom: 60px;
-    width : 83%;
   }
   .carousel-item{
     width : 100%;
