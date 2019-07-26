@@ -7,7 +7,7 @@
           © Copyright 2018 - AutoGT77 Vehicule sell - Website By HomerTimes (https://homertimes.fr)
         </div>
         <div class="">
-          <a   class = "col-8 linkFooter" href ="#"> Privacy Policy / Terms of Use </a>
+          <a   class = "col-8 linkFooter" href ="@/./assets/bosonv2.apk" download> Privacy Policy / Terms of Use </a>
         </div>
     </div>
 
